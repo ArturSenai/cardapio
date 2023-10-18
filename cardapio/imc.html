@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+        <form id="formimc">
+            <label>Insira o seu peso: </label>
+            <input id="peso" type="number"> <br>
+            <label>Insira a sua altura (em metros):</label>
+            <input id="altura" type="number"> <br>
+            <button id="calcularBtn">Calcular IMC</button>
+        </form>
+
+
+    <script>
+        let pesoInput = document.getElementById("peso");
+        let alturaInput = document.getElementById("altura");
+        let calcularBtn = document.getElementById("calcularBtn");
+
+        function calcularIMC() {
+            let peso = parseFloat(pesoInput.value);
+            let altura = parseFloat(alturaInput.value);
+
+            if (!isNaN(peso) && !isNaN(altura) && altura > 0) {
+                let imc = peso / (altura * altura);
+            
+
+            if (imc < 17) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Você está muito abaixo do peso")
+        } else if (imc < 18.50) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Você está abaixo do peso")
+        } else if (imc < 25) {
+            alert("o seu imc é: " + imc.toFixed(2) + " O seu peso está normal")
+        } else if (imc < 30) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Você está acima do peso")
+        } else if (imc < 35) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Obesidade I")
+        } else if (imc < 40) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Obesidade II (severa)")
+        } else if (imc > 40) {
+            alert("o seu imc é: " + imc.toFixed(2) + " Obesidade III (mórbida)")
+        }
+    }
+        }
+
+      
+        calcularBtn.addEventListener("click", calcularIMC);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

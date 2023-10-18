@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cadastro de cardápio</h1>
+    <hr>
+    <a href="imc.html"><img src="C:\Users\rutra\OneDrive\Imagens\Saved Pictures\imc.png" alt="imagem top imc" width="50px;" height="50px;"> </a>
+    <hr>
+
+    <div id="form">
+        <label> Insira a comida para cadastrar: </label>
+        <input type="text" placeholder="..." id="comida"><br>
+        <label> Selecione o dia da semana para cadastrar a comida </label>
+        <select id="select">
+            <option value="" disabled selected></option>
+            <option value="segunda">Segunda-feira</option>
+            <option value="terca">Terça-feira</option>
+            <option value="quarta">Quarta-feira</option>
+            <option value="quinta">Quinta-feira</option>
+            <option value="sexta">Sexta-feira</option>
+            <option value="sabado">Sabado</option>
+            <option value="domingo">Domingo</option>
+        </select><br>
+        <button id="btn">Adicionar</button>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th id="segunda">Segunda-feira</th>
+                <th id="terca">Terça-feira</th>
+                <th id="quarta">Quarta-feira</th>
+                <th id="quinta">Quinta-feira</th>
+                <th id="sexta">Sexta-feira</th>
+                <th id="sabado">Sabado</th>
+                <th id="domingo">Domingo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <script src="script.js"> </script>
+
+</body>
+
+</html>
